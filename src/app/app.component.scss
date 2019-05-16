@@ -1,0 +1,21 @@
+.sombra{
+
+   box-shadow: 2px 6px;
+}
+.wrapper{
+   text-align: center;
+}
+.container{
+   display: inline-block;
+}
+body{
+   height: 100vh;
+}
+
+.centered {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   /* bring your own prefixes */
+   transform: translate(-50%, -50%);
+ }

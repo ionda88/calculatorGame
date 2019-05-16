@@ -1,0 +1,71 @@
+<div class="wrapper">
+  <div class="centered">
+    <h1>Calculadora</h1>
+
+
+    <div>
+      <a>NÍVEL: {{nivel}}</a> <br />
+      <a>JOGADA: {{jogadas}}</a> <br />
+      <a>OBJETIVO: {{objetivo}}</a><br />
+      <input type="text" *ngIf="jogando" class="form-control align-self-center" style="text-align: center"
+        value="{{resultado}}" readonly />
+      <input type="text" *ngIf="!jogando" class="form-control align-self-center" style="text-align: center"
+        value="{{mensagem}}" readonly />
+    </div>
+    <!-- Botões -->
+    <div *ngIf="nivel == 1">
+      <div class="form-group">
+        <!--      <button type="button" class="btn btn-light sombra"> . </button> -->
+        <button type="button" (click)="calcular('+', 1)" *ngIf="jogando" class="btn btn-dark">+1</button>
+        <button type="button" (click)="limpaVisor()" *ngIf="jogando" class="btn btn-danger">CLR</button>
+        <button type="button" (click)="OK()" *ngIf="!jogando" class="btn btn-success">OK</button>
+      </div>
+    </div>
+    <div *ngIf="nivel == 2">
+
+      <!--  <button type="button" class="btn btn-light shadow-sm"> . </button> -->
+      <!--       <div class="row"> -->
+      <button type="button" (click)="calcular('+', 2)" *ngIf="jogando" class="btn btn-dark">+2</button>
+      <button type="button" (click)="calcular('+', 3)" *ngIf="jogando" class="btn btn-dark">+3</button>
+      <button type="button" (click)="limpaVisor()" *ngIf="jogando" class="btn btn-danger">CLR</button>
+      <button type="button" (click)="OK()" *ngIf="!jogando" class="btn btn-success">OK</button>
+      <!--       </div> -->
+
+    </div>
+    <div *ngIf="nivel == 3">
+
+      <!--  <button type="button" class="btn btn-light shadow-sm"> . </button> -->
+      <!--       <div class="row"> -->
+      <button type="button" (click)="calcular('*', 4)" *ngIf="jogando" class="btn btn-dark">x4</button>
+      <button type="button" (click)="calcular('+', 1)" *ngIf="jogando" class="btn btn-dark">+1</button>
+      <button type="button" (click)="calcular('+',2)" *ngIf="jogando" class="btn btn-dark">+2</button>
+      <button type="button" (click)="limpaVisor()" *ngIf="jogando" class="btn btn-danger">CLR</button>
+      <button type="button" (click)="OK()" *ngIf="!jogando" class="btn btn-success">OK</button>
+      <!--       </div> -->
+
+    </div>
+    <div *ngIf="nivel == 4">
+
+      <!--  <button type="button" class="btn btn-light shadow-sm"> . </button> -->
+      <!--       <div class="row"> -->
+      <button type="button" (click)="calcular('+', 4)" *ngIf="jogando" class="btn btn-dark">+4</button>
+      <button type="button" (click)="calcular('-',2)" *ngIf="jogando" class="btn btn-dark">-2</button>
+      <button type="button" (click)="limpaVisor()" *ngIf="jogando" class="btn btn-danger">CLR</button>
+      <button type="button" (click)="OK()" *ngIf="!jogando" class="btn btn-success">OK</button>
+      <!--       </div> -->
+
+    </div>
+    <div *ngIf="nivel == 5">
+
+      <!--  <button type="button" class="btn btn-light shadow-sm"> . </button> -->
+      <!--       <div class="row"> -->
+      <button type="button" (click)="calcular('+', 4)" *ngIf="jogando" class="btn btn-dark">+4</button>
+      <button type="button" (click)="calcular('*',4)" *ngIf="jogando" class="btn btn-dark">x4</button>
+      <button type="button" (click)="calcular('/',4)" *ngIf="jogando" class="btn btn-dark">/4</button>
+      <button type="button" (click)="limpaVisor()" *ngIf="jogando" class="btn btn-danger">CLR</button>
+      <button type="button" (click)="OK()" *ngIf="!jogando" class="btn btn-success">OK</button>
+      <!--       </div> -->
+
+    </div>
+  </div>
+</div>
